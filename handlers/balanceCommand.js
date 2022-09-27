@@ -6,7 +6,7 @@ module.exports = async function balanceCommand(ctx,state) {
     //USER HAS INIT
     if(user) {
         console.log("There is a user present in DB!")
-        exec(`safe keys balance --sk ${user.sk_wallet} --json`, (error, stdout, stderr) => {
+        exec(`safe wallet balance --json ${user.sk_wallet}`, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 ctx.replyWithHTML(
