@@ -35,7 +35,7 @@ module.exports = async function initCommand(ctx) {
                 ctx.replyWithHTML(
                     `You <b>successfully</b> initialized your personal <b>SAFE Wallet</b>!`+
                     `\nYour <b>secret data</b>; SAFE URL, Public Key and Secret Key are stored under the command /secret!`+
-                    `\n\nThe address is preloaded with 500 SAFE coins to experiment with, you can add more using the command <code>/addcoins [amount]</code>.`+
+                    `\n\nYour Wallet is empty for now, you canNOT add more using the command <code>/addcoins [amount]</code>.`+
                     `\n\nFor more details on how to use this bot view <code>/help</code>.`+
                     `\n\n*The Chat Your Are in Doesn't Allow Images so the banner is left out!*`
                 ).catch(function(e){})
