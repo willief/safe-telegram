@@ -1,9 +1,8 @@
-# safe auth logout
-# safe auth stop
+
 safe node killall
-# safe auth clear
-# safe config clear
+rm -rf $USER/.safe/node/*
+safe config clear
 safe node install
-# safe vault install
-# safe auth restart
-safe node run-baby-fleming --testing
+safe networks add $CONN
+safe config
+
