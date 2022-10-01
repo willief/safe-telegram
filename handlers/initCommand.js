@@ -9,7 +9,7 @@ module.exports = async function initCommand(ctx) {
 
     // //USER IN DB?
     // if(!res) {        
-        exec(`safe keys create --test-coins --preload 500 --json`, (error, stdout, stderr) => {
+        exec(`safe keys create --for-cli --json`, (error, stdout, stderr) => {
             if (error) {
                 console.log(`error: ${error.message}`);
                 return;
@@ -29,7 +29,6 @@ module.exports = async function initCommand(ctx) {
             ctx.replyWithPhoto({ source: 'init.png' }, Extra.caption(
                 `You <b>successfully</b> initialized your personal <b>SAFE Wallet</b>!`+
                 `\nYour <b>secret data</b>; SAFE URL, Public Key and Secret Key are stored under the command /secret!`+
-                `\n\nThe address is preloaded with 500 SAFE coins to experiment with, you can add more using the command <code>/addcoins [amount]</code>.`+
                 `\n\nFor more details on how to use this bot view <code>/help</code>.`).HTML()
             ).catch(function(e){
                 ctx.replyWithHTML(

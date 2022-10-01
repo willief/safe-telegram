@@ -30,7 +30,8 @@ module.exports = async function sendCommand(ctx,state) {
                 return
             }
 
-            exec(`safe keys transfer --from ${user.sk_wallet} --to ${toSafeURL} ${amount} --json`, (error, stdout, stderr) => {
+            //exec(`safe keys transfer --from ${user.sk_wallet} --to ${toSafeURL} ${amount} --json`, (error, stdout, stderr) => {
+            exec(`safe wallet deposit --json --dbc ${user.dbc} --to ${toSafeURL} ${amount} `, (error, stdout, stderr) => {
                 if (error) {
                     console.log(`error: ${error.message}`);
                     if(error.message.contains('Transfer(SameSenderAndRecipient)')) return ctx.replyWithHTML(`You cannot send to yourself!`).catch(function(e){})

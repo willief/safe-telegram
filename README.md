@@ -3,7 +3,7 @@ Send safecoins to other users with telegram
 
 # You will find an help overview about all the various commands and more.
 
-#  Important Notes:
+# Important Notes:
 The /cat [url] and /dog [url] are currently unable to view files!
 
 # Commands:
